@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>teste devclub</title>
+</head>
+<body>
+    <h1 class="primeiro-paragrafo">Teste JavaScript do DevClub</h1>
+
+    <input type="text" placeholder="Digite seu texto aqui" class="input-um" onkeypress="digiteiNoinput()">
+    <p class="paragrafo-vazio"></p>
+    <button class="primeiro-botao" onclick="cliqueiNoBotao()">Confirmar</button>    
+</body>
+
+<style>
+    .primeiro-paragrafo{
+        color: blue;
+    }
+
+    .input-um{
+        border-radius: 10px;
+    }
+
+    .primeiro-botao{
+        background-color: red;
+        color: white;
+        border-radius: 8px;
+    }
+</style>
+
+
+<script>
+    const button = document.querySelector(".primeiro-botao")
+    const input = document.querySelector(".input-um")
+    const paragrafo = document.querySelector(".paragrafo-vazio")
+
+    function cliqueiNoBotao(){
+        paragrafo.innerHTML = input.value
+    }
+    
+    function digiteiNoinput(){
+        console.log(input.value)
+    }
+</script>
+</html>
